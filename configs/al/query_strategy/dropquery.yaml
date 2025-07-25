@@ -1,0 +1,10 @@
+name: DropQuery
+
+strategy:
+  _target_: skactiveml.pool.DropQuery
+  random_state: ${random_seed}
+  n_dropout_samples: 20
+
+query_kwargs:
+  batch_size: ${dataset.batch_size}
+  fit_clf: False

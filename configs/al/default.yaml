@@ -1,0 +1,7 @@
+
+defaults:
+  - _self_
+  - init_strategy: random
+  - query_strategy: random
+
+n_cycles: 20

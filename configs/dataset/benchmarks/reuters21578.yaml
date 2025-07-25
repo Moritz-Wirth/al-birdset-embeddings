@@ -1,0 +1,29 @@
+batch_size: 150
+name: Reuters
+
+train:
+  data:
+    _target_: al_embeddings.data.Reuters21578
+    split: train
+
+  load_dataset_kwargs:
+    path: ucirvine/reuters21578
+    name: ModApte
+    cache_dir: ${paths.dataset_dir}/${dataset.name}
+    trust_remote_code: True
+
+  prepare_kwargs:
+    null
+
+test:
+  data:
+    _target_: al_embeddings.data.Reuters21578
+    split: test
+
+  load_dataset_kwargs:
+    path: ucirvine/reuters21578
+    name: ModApte
+    cache_dir: ${paths.dataset_dir}/${dataset.name}
+
+  prepare_kwargs:
+    null

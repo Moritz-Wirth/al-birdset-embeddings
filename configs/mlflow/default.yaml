@@ -1,0 +1,4 @@
+uri: sqlite:///${paths.output_dir}/mlflow.db
+# removes class prefixes if _target_ is used
+experiment_name: ${dataset.name}-${al.init_strategy.name}-${embeddings.network._target_}
+run_name: ${al.query_strategy.name}-${random_seed}

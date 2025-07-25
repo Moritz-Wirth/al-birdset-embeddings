@@ -1,0 +1,3 @@
+_target_: al_embeddings.model.BirdMAEEmbedModel
+model_name: DBD-research-group/Bird-MAE-Huge
+cache_dir: /mnt/stud/home/mwirth/projects/al-embeddings/cache/birdmae

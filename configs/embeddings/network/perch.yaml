@@ -1,0 +1,2 @@
+_target_: al_embeddings.model.PerchEmbedModel
+model_name: perch_8

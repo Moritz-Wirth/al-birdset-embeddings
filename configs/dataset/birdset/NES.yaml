@@ -1,0 +1,18 @@
+batch_size: 200
+name: NES_scape
+
+train:
+  data:
+    _target_: al_embeddings.data.Birdset
+
+  load_dataset_kwargs:
+    path: DBD-research-group/BirdSet
+    name: NES_scape
+    cache_dir: ${paths.dataset_dir}/${dataset.name}
+    trust_remote_code: True
+
+  prepare_kwargs:
+    null
+
+test:
+  split_size: 0.3

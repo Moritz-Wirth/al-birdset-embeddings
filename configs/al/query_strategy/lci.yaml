@@ -1,0 +1,9 @@
+name: LCI
+
+strategy:
+  _target_: skactiveml.pool.LabelCardinalityInconsistency
+  random_state: ${random_seed}
+
+query_kwargs:
+  batch_size: ${dataset.batch_size}
+  fit_clf: False

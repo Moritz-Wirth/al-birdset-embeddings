@@ -1,0 +1,10 @@
+name: typiclust
+
+strategy:
+  _target_: skactiveml.pool.TypiClust
+  random_state: ${random_seed}
+  cluster_algo_dict:
+    random_state: ${random_seed}
+
+query_kwargs:
+  batch_size: ${dataset.batch_size}

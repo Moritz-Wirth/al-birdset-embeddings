@@ -1,0 +1,17 @@
+batch_size: 50
+name: POW_scape
+train:
+  data:
+    _target_: al_embeddings.data.Birdset
+
+  load_dataset_kwargs:
+    path: DBD-research-group/BirdSet
+    name: POW_scape
+    cache_dir: ${paths.dataset_dir}/${dataset.name}
+    trust_remote_code: True
+
+  prepare_kwargs:
+    null
+
+test:
+  split_size: 0.2

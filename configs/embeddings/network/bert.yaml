@@ -1,0 +1,2 @@
+_target_: al_embeddings.model.BertBaseUncased
+cache_dir: ${paths.dataset_dir}/models

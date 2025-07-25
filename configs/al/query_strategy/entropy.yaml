@@ -1,0 +1,10 @@
+name: Entropy
+
+strategy:
+  _target_: skactiveml.pool.UncertaintySampling
+  method: entropy
+  random_state: ${random_seed}
+
+query_kwargs:
+  batch_size: ${dataset.batch_size}
+  fit_clf: False

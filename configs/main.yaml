@@ -1,0 +1,27 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - dataset: birdset/NBP
+  #- dataset: benchmarks/aapd
+  - embeddings: default
+  - classifier: logistic_regression_multilabel
+  - metrics: default
+  - al: default
+  - mlflow: default
+  - paths: workstation
+  - override embeddings/network: perch
+  #- override embeddings/network: bert
+  - override al/init_strategy: random
+  - override al/query_strategy: random
+  #- override hydra/launcher: cpu # turn on for slurm job creation
+
+random_seed: 0
+only_create_embeddings: False
+
+hydra:
+  sweep:
+    dir: ${paths.output_dir}/multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}
+  run:
+    dir: ${paths.output_dir}/runs/${now:%Y-%m-%d}/${now:%H-%M-%S}

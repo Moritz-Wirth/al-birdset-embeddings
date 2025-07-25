@@ -1,0 +1,34 @@
+_target_: al_embeddings.metrics.MetricsCollection
+metrics_dict:
+  accuracy:
+    _target_: sklearn.metrics.accuracy_score
+    _partial_: true
+  roc_auc_macro:
+    _target_: sklearn.metrics.roc_auc_score
+    _partial_: true
+    average: macro
+  roc_auc_micro:
+    _target_: sklearn.metrics.roc_auc_score
+    _partial_: true
+    average: micro
+  f1_macro:
+    _target_: sklearn.metrics.f1_score
+    _partial_: True
+    average: macro
+  f1_micro:
+    _target_: sklearn.metrics.f1_score
+    _partial_: True
+    average: micro
+  top_1_accuracy:
+    _target_: al_embeddings.metrics.top_k_accuracy
+    _partial_: True
+    k: 1
+  top_5_accuracy:
+    _target_: al_embeddings.metrics.top_k_accuracy
+    _partial_: True
+    k: 5
+  cMAP:
+    _target_: sklearn.metrics.average_precision_score
+    _partial_: True
+    average: macro
+

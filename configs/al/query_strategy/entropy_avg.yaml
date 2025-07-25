@@ -1,0 +1,13 @@
+name: Entropy_average
+
+strategy:
+  _target_: skactiveml.pool.UncertaintySampling
+  method: entropy
+  random_state: ${random_seed}
+  ml_agg:
+    _target_: numpy.average
+    _partial_: True
+
+query_kwargs:
+  batch_size: ${dataset.batch_size}
+  fit_clf: False

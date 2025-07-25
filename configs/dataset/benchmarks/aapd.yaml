@@ -1,0 +1,22 @@
+batch_size: 20
+name: AAPD
+
+train:
+  data:
+    _target_: al_embeddings.data.AAPD
+    split: train
+
+  load_dataset_kwargs:
+    cache_dir: ${paths.dataset_dir}/aapd
+  prepare_kwargs:
+    null
+
+test:
+  data:
+    _target_: al_embeddings.data.AAPD
+    split: test
+
+  load_dataset_kwargs:
+    cache_dir: ${paths.dataset_dir}/aapd
+  prepare_kwargs:
+    null

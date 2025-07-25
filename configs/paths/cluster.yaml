@@ -1,0 +1,8 @@
+root_dir: ${oc.env:PROJECT_ROOT}
+work_dir: ${hydra:runtime.cwd}
+
+output_dir: ${paths.root_dir}/output
+
+dataset_dir: /mnt/work/bird2vec/birdset_hf_download_mw
+embeddings_dir: ${paths.dataset_dir}/embeddings
+
